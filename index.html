@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <link rel="canonical" href="https://qq39bet.com/" />
+    <link rel="canonical" href="https://qq39betwin.online/" />
     <link
       rel="alternate"
-      href="https://qq39bet.com/"
+      href="https://qq39betwin.online/"
       hreflang="id"
     />
     <meta
@@ -481,6 +481,53 @@
         transform: scale(0.98);
       }
 
+      /* Styles for VIP Club & Promo Info Box */
+      .kt-info-box {
+        position: relative;
+        margin-top: 14px;
+        padding: 14px 16px;
+        background: linear-gradient(145deg, rgba(30, 0, 0, 0.85), rgba(10, 0, 0, 0.95));
+        border: 1px solid var(--kt-gold);
+        border-radius: 14px;
+        box-shadow: inset 0 0 12px rgba(217, 164, 65, 0.12), 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .kt-info-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20%;
+        right: 20%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--kt-gold-light), transparent);
+      }
+
+      .kt-info-title {
+        color: var(--kt-gold-light);
+        font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        text-align: center;
+        text-shadow: 0 0 8px rgba(217, 164, 65, 0.4);
+      }
+
+      .kt-info-desc {
+        color: #dcdcdc;
+        font-size: 10px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .kt-info-divider {
+        height: 1px;
+        background: rgba(229, 57, 53, 0.3);
+        margin: 10px 0;
+      }
+
       .kt-vault-footer {
         position: relative;
         padding: 14px 12px;
@@ -730,6 +777,9 @@
         .kt-access-btn { grid-template-columns: 30px 1fr 22px; min-height: 48px; padding: 7px 11px; border-radius: 12px; font-size: 10.5px; letter-spacing: 0.6px; }
         .kt-btn-index { width: 25px; height: 25px; }
         .kt-btn-arrow { font-size: 21px; }
+        .kt-info-box { padding: 11px 12px; margin-top: 11px; }
+        .kt-info-title { font-size: 10px; }
+        .kt-info-desc { font-size: 9px; }
         .kt-vault-footer { padding: 12px 8px; }
         .kt-copyright { font-size: 8px; }
         .kt-opening-seal { width: 58px; height: 58px; margin-bottom: 19px; }
@@ -854,6 +904,21 @@
               <span class="kt-btn-arrow">&rsaquo;</span>
             </a>
           </nav>
+
+          <!-- Space Deskripsi VIP & Promosi dengan Border Khusus -->
+          <div class="kt-info-box">
+            <div class="kt-info-title">Member Eksklusif VIP Club Untukmu</div>
+            <div class="kt-info-desc">
+              Nikmati layanan eksklusif, promosi spesial level tertentu, dan rebate tertinggi. Rasakan pengalaman bermain tak terlupakan bersama VIP Club QQ39BET.
+            </div>
+            
+            <div class="kt-info-divider"></div>
+            
+            <div class="kt-info-title">Tingkatan Member VIP Club Anda</div>
+            <div class="kt-info-desc" style="margin-bottom: 0;">
+              Tingkatkan level VIP-mu untuk kenyamanan ekstra, promo extra bonus, komisi instan, serta prioritas pelayanan terbaik setiap hari!
+            </div>
+          </div>
         </div>
 
         <footer class="kt-vault-footer">
