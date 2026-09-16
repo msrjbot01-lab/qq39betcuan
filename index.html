@@ -122,7 +122,7 @@
         min-height: 100vh;
         min-height: 100svh;
         margin: 0;
-        padding: 35px 20px calc(35px + env(safe-area-inset-bottom));
+        padding: 18px 9px calc(18px + env(safe-area-inset-bottom));
         overflow-x: hidden;
         color: var(--kt-white);
         background: radial-gradient(circle at 50% -15%, #330000 0%, #140000 28%, #030303 65%, #000 100%);
@@ -146,50 +146,6 @@
         width: 100%;
         max-width: 470px;
         margin: auto;
-      }
-
-      /* Container Tambahan untuk Jalur Terbang Naga Mengelilingi Border */
-      .kt-vault-container {
-        position: relative;
-        padding: 25px;
-      }
-
-      /* Animasi Naga Emas Terbang Mengelilingi Border Kotak */
-      .kt-orbit-dragon {
-        position: absolute;
-        width: 80px;
-        z-index: 50;
-        pointer-events: none;
-        filter: drop-shadow(0 0 12px rgba(217, 164, 65, 0.9));
-        animation: borderOrbit 12s linear infinite;
-      }
-
-      @keyframes borderOrbit {
-        0% {
-          top: 0px;
-          left: 0px;
-          transform: rotate(0deg);
-        }
-        25% {
-          top: 0px;
-          left: calc(100% - 65px);
-          transform: rotate(90deg);
-        }
-        50% {
-          top: calc(100% - 65px);
-          left: calc(100% - 65px);
-          transform: rotate(180deg);
-        }
-        75% {
-          top: calc(100% - 65px);
-          left: 0px;
-          transform: rotate(270deg);
-        }
-        100% {
-          top: 0px;
-          left: 0px;
-          transform: rotate(360deg);
-        }
       }
 
       .kt-vault-shell {
@@ -525,6 +481,7 @@
         transform: scale(0.98);
       }
 
+      /* Styles for VIP Club & Promo Info Box */
       .kt-info-box {
         position: relative;
         margin-top: 14px;
@@ -608,7 +565,7 @@
       .kt-opening {
         position: absolute;
         inset: 0;
-        z-index: 100;
+        z-index: 10;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -809,7 +766,7 @@
       }
 
       @media (max-width: 480px) {
-        body { padding: 25px 10px calc(25px + env(safe-area-inset-bottom)); }
+        body { padding: 10px 6px calc(10px + env(safe-area-inset-bottom)); }
         .kt-vault-shell { border-radius: 20px; }
         .kt-vault-top { min-height: 45px; padding: 10px 12px; font-size: 9px; letter-spacing: 1px; }
         .kt-vault-body { padding: 11px 13px 13px; }
@@ -850,8 +807,7 @@
         .kt-access-btn::after,
         .kt-vault-footer::before,
         .kt-copyright,
-        .kt-opening-seal amp-img,
-        .kt-orbit-dragon {
+        .kt-opening-seal amp-img {
           animation: none;
         }
         .kt-opening { display: none; }
@@ -872,116 +828,103 @@
     </svg>
 
     <main class="kt-amp-stage">
-      <div class="kt-vault-container">
-        
-        <!-- Naga Emas Terbang Mengelilingi Border Kotak Utama Secara Kontinu -->
-        <div class="kt-orbit-dragon" aria-hidden="true">
-          <amp-img
-            src="naga.png"
-            width="80"
-            height="80"
-            layout="responsive"
-            alt="Naga Terbang Mengelilingi Border"
-          ></amp-img>
+      <section class="kt-vault-shell" aria-label="Akses resmi QQ39BET">
+        <div class="kt-opening" aria-hidden="true">
+          <div class="kt-opening-center">
+            <div class="kt-opening-seal">
+              <amp-img
+                src="favicon.png"
+                width="64"
+                height="64"
+                layout="responsive"
+                alt="Logo Loader"
+              ></amp-img>
+            </div>
+            <div class="kt-opening-brand">QQ39BET</div>
+            <div class="kt-opening-line"></div>
+            <div class="kt-opening-subtitle">WELCOME</div>
+          </div>
         </div>
 
-        <section class="kt-vault-shell" aria-label="Akses resmi QQ39BET">
-          <div class="kt-opening" aria-hidden="true">
-            <div class="kt-opening-center">
-              <div class="kt-opening-seal">
-                <amp-img
-                  src="favicon.png"
-                  width="64"
-                  height="64"
-                  layout="responsive"
-                  alt="Logo Loader"
-                ></amp-img>
-              </div>
-              <div class="kt-opening-brand">QQ39BET</div>
-              <div class="kt-opening-line"></div>
-              <div class="kt-opening-subtitle">WELCOME</div>
+        <header class="kt-vault-top">
+          <div class="kt-vault-mark">
+            <div class="kt-vault-gem">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+              </svg>
+            </div>
+            <span>QQ39BET</span>
+          </div>
+
+          <div class="kt-vault-status"></div>
+        </header>
+
+        <div class="kt-vault-body">
+          <div class="kt-kicker">
+            <span class="kt-kicker-text">Selamat Datang di QQ39BET</span>
+          </div>
+
+          <div class="kt-hero-card">
+            <div class="kt-hero-media">
+              <div class="kt-hero-scan"></div>
+
+              <amp-img
+                src="banner.png"
+                width="420"
+                height="420"
+                layout="responsive"
+                alt="Banner QQ39BET"
+              >
+              </amp-img>
             </div>
           </div>
 
-          <header class="kt-vault-top">
-            <div class="kt-vault-mark">
-              <div class="kt-vault-gem">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
-                </svg>
-              </div>
-              <span>QQ39BET</span>
+          <nav class="kt-access-list" aria-label="Menu akses QQ39BET">
+            <a
+              href="https://www.qq39betlk.bond/register?code=7GP01RGH"
+              class="kt-access-btn kt-access-register"
+              rel="nofollow noopener"
+            >
+              <span class="kt-btn-index">
+                <svg viewBox="0 0 24 24"><path d="M15 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/></svg>
+              </span>
+              <span class="kt-btn-label">Daftar QQ39BET</span>
+              <span class="kt-btn-arrow">&rsaquo;</span>
+            </a>
+
+            <a
+              href="https://www.qq39betlk.bond/"
+              class="kt-access-btn kt-access-login"
+              rel="nofollow noopener"
+            >
+              <span class="kt-btn-index">
+                <svg viewBox="0 0 24 24"><path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 10h-6v2h6c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-6v2h6v12z"/></svg>
+              </span>
+              <span class="kt-btn-label">Login QQ39BET</span>
+              <span class="kt-btn-arrow">&rsaquo;</span>
+            </a>
+          </nav>
+
+          <!-- Space Deskripsi VIP & Promosi dengan Border Khusus -->
+          <div class="kt-info-box">
+            <div class="kt-info-title">Member Eksklusif VIP Club Untukmu</div>
+            <div class="kt-info-desc">
+              Nikmati layanan eksklusif, promosi spesial level tertentu, dan rebate tertinggi. Rasakan pengalaman bermain tak terlupakan bersama VIP Club QQ39BET.
             </div>
-
-            <div class="kt-vault-status"></div>
-          </header>
-
-          <div class="kt-vault-body">
-            <div class="kt-kicker">
-              <span class="kt-kicker-text">Selamat Datang di QQ39BET</span>
-            </div>
-
-            <div class="kt-hero-card">
-              <div class="kt-hero-media">
-                <div class="kt-hero-scan"></div>
-
-                <amp-img
-                  src="banner.png"
-                  width="420"
-                  height="420"
-                  layout="responsive"
-                  alt="Banner QQ39BET"
-                >
-                </amp-img>
-              </div>
-            </div>
-
-            <nav class="kt-access-list" aria-label="Menu akses QQ39BET">
-              <a
-                href="https://www.qq39betlk.bond/register?code=7GP01RGH"
-                class="kt-access-btn kt-access-register"
-                rel="nofollow noopener"
-              >
-                <span class="kt-btn-index">
-                  <svg viewBox="0 0 24 24"><path d="M15 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/></svg>
-                </span>
-                <span class="kt-btn-label">Daftar QQ39BET</span>
-                <span class="kt-btn-arrow">&rsaquo;</span>
-              </a>
-
-              <a
-                href="https://www.qq39betlk.bond/"
-                class="kt-access-btn kt-access-login"
-                rel="nofollow noopener"
-              >
-                <span class="kt-btn-index">
-                  <svg viewBox="0 0 24 24"><path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 10h-6v2h6c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-6v2h6v12z"/></svg>
-                </span>
-                <span class="kt-btn-label">Login QQ39BET</span>
-                <span class="kt-btn-arrow">&rsaquo;</span>
-              </a>
-            </nav>
-
-            <div class="kt-info-box">
-              <div class="kt-info-title">Member Eksklusif VIP Club Untukmu</div>
-              <div class="kt-info-desc">
-                Nikmati layanan eksklusif, promosi spesial level tertentu, dan rebate tertinggi. Rasakan pengalaman bermain tak terlupakan bersama VIP Club QQ39BET.
-              </div>
-              
-              <div class="kt-info-divider"></div>
-              
-              <div class="kt-info-title">Tingkatan Member VIP Club Anda</div>
-              <div class="kt-info-desc" style="margin-bottom: 0;">
-                Tingkatkan level VIP-mu untuk kenyamanan ekstra, promo extra bonus, komisi instan, serta prioritas pelayanan terbaik setiap hari!
-              </div>
+            
+            <div class="kt-info-divider"></div>
+            
+            <div class="kt-info-title">Tingkatan Member VIP Club Anda</div>
+            <div class="kt-info-desc" style="margin-bottom: 0;">
+              Tingkatkan level VIP-mu untuk kenyamanan ekstra, promo extra bonus, komisi instan, serta prioritas pelayanan terbaik setiap hari!
             </div>
           </div>
+        </div>
 
-          <footer class="kt-vault-footer">
-            <span class="kt-copyright">&copy; 2026-RJ QQ39BET. All Rights Reserved.</span>
-          </footer>
-        </section>
-      </div>
+        <footer class="kt-vault-footer">
+          <span class="kt-copyright">&copy; 2026-RJ QQ39BET. All Rights Reserved.</span>
+        </footer>
+      </section>
     </main>
   </body>
 </html>
