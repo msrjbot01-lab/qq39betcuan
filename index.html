@@ -518,51 +518,113 @@
         transform: scale(0.98);
       }
 
+      /* === MODIFIKASI INFO BOX MENJADI LEBIH KEREN & FUTURISTIK === */
       .kt-info-box {
         position: relative;
         margin-top: 14px;
-        padding: 14px 16px;
-        background: linear-gradient(145deg, rgba(30, 0, 0, 0.85), rgba(10, 0, 0, 0.95));
+        padding: 16px 16px;
+        background: linear-gradient(145deg, rgba(20, 3, 3, 0.9), rgba(5, 0, 0, 0.98));
         border: 1px solid var(--kt-gold);
-        border-radius: 14px;
-        box-shadow: inset 0 0 12px rgba(217, 164, 65, 0.12), 0 4px 15px rgba(0, 0, 0, 0.5);
+        border-radius: 16px;
+        box-shadow: inset 0 0 15px rgba(217, 164, 65, 0.15), 0 6px 20px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
       }
 
-      .kt-info-box::before {
+      /* Aksen sudut futuristik di dalam info box */
+      .kt-info-box::before,
+      .kt-info-box::after {
         content: "";
         position: absolute;
-        top: 0;
-        left: 20%;
-        right: 20%;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--kt-gold-light), transparent);
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+      }
+      .kt-info-box::before {
+        top: 6px;
+        left: 6px;
+        border-top: 1px solid var(--kt-gold-light);
+        border-left: 1px solid var(--kt-gold-light);
+      }
+      .kt-info-box::after {
+        bottom: 6px;
+        right: 6px;
+        border-bottom: 1px solid var(--kt-gold-light);
+        border-right: 1px solid var(--kt-gold-light);
+      }
+
+      .kt-info-item {
+        position: relative;
+        padding: 4px 0;
+      }
+
+      .kt-info-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        margin-bottom: 6px;
+      }
+
+      .kt-info-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: rgba(217, 164, 65, 0.15);
+        border: 1px solid rgba(255, 227, 160, 0.4);
+        border-radius: 5px;
+      }
+
+      .kt-info-icon svg {
+        width: 12px;
+        height: 12px;
+        fill: var(--kt-gold-light);
       }
 
       .kt-info-title {
-        color: var(--kt-gold-light);
+        background: linear-gradient(90deg, #ffe3a0, #fff, #d9a441, #ffe3a0);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: ktTextShimmer 4s linear infinite;
         font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
         font-size: 11px;
         font-weight: 800;
         letter-spacing: 1px;
         text-transform: uppercase;
-        margin-bottom: 6px;
         text-align: center;
-        text-shadow: 0 0 8px rgba(217, 164, 65, 0.4);
+        text-shadow: 0 0 10px rgba(217, 164, 65, 0.3);
       }
 
       .kt-info-desc {
         color: #dcdcdc;
         font-size: 10px;
-        line-height: 1.5;
+        line-height: 1.55;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 0;
       }
 
       .kt-info-divider {
+        position: relative;
         height: 1px;
-        background: rgba(229, 57, 53, 0.3);
-        margin: 10px 0;
+        background: linear-gradient(90deg, transparent, rgba(229, 57, 53, 0.6), var(--kt-gold), rgba(229, 57, 53, 0.6), transparent);
+        margin: 12px 0;
       }
+
+      .kt-info-divider::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 5px;
+        background: var(--kt-gold);
+        border-radius: 2px;
+        box-shadow: 0 0 8px var(--kt-gold);
+      }
+      /* === SELESAI MODIFIKASI INFO BOX === */
 
       .kt-vault-footer {
         position: relative;
@@ -808,7 +870,7 @@
         .kt-access-btn { grid-template-columns: 30px 1fr 22px; min-height: 48px; padding: 7px 11px; border-radius: 12px; font-size: 10.5px; letter-spacing: 0.6px; }
         .kt-btn-index { width: 25px; height: 25px; }
         .kt-btn-arrow { font-size: 21px; }
-        .kt-info-box { padding: 11px 12px; margin-top: 11px; }
+        .kt-info-box { padding: 13px 12px; margin-top: 11px; }
         .kt-info-title { font-size: 10px; }
         .kt-info-desc { font-size: 9px; }
         .kt-vault-footer { padding: 12px 8px; }
@@ -887,7 +949,6 @@
             <span>QQ39BET</span>
           </div>
 
-          <!-- Bar Sinyal Aktif Menggantikan Titik LED Berdenyut -->
           <div class="kt-signal-bars" aria-label="Server Signal Stable">
             <div class="kt-signal-bar"></div>
             <div class="kt-signal-bar"></div>
@@ -942,17 +1003,32 @@
             </a>
           </nav>
 
+          <!-- Info Box dengan Tampilan Baru yang Lebih Keren -->
           <div class="kt-info-box">
-            <div class="kt-info-title">Member Eksklusif VIP Club Untukmu</div>
-            <div class="kt-info-desc">
-              Nikmati layanan eksklusif, promosi spesial level tertentu, dan rebate tertinggi. Rasakan pengalaman bermain tak terlupakan bersama VIP Club QQ39BET.
+            <div class="kt-info-item">
+              <div class="kt-info-header">
+                <div class="kt-info-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                </div>
+                <div class="kt-info-title">Member Eksklusif VIP Club Untukmu</div>
+              </div>
+              <div class="kt-info-desc">
+                Nikmati layanan eksklusif, promosi spesial level tertentu, dan rebate tertinggi. Rasakan pengalaman bermain tak terlupakan bersama VIP Club QQ39BET.
+              </div>
             </div>
             
             <div class="kt-info-divider"></div>
             
-            <div class="kt-info-title">Tingkatan Member VIP Club Anda</div>
-            <div class="kt-info-desc" style="margin-bottom: 0;">
-              Tingkatkan level VIP-mu untuk kenyamanan ekstra, promo extra bonus, komisi instan, serta prioritas pelayanan terbaik setiap hari!
+            <div class="kt-info-item">
+              <div class="kt-info-header">
+                <div class="kt-info-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                </div>
+                <div class="kt-info-title">Tingkatan Member VIP Club Anda</div>
+              </div>
+              <div class="kt-info-desc">
+                Tingkatkan level VIP-mu untuk kenyamanan ekstra, promo extra bonus, komisi instan, serta prioritas pelayanan terbaik setiap hari!
+              </div>
             </div>
           </div>
         </div>
